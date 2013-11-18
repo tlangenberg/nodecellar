@@ -34,6 +34,7 @@ exports.findById = function(req, res) {
 };
 
 exports.findAll = function(req, res) {
+    console.log("find all");
     db.collection('wines', function(err, collection) {
         collection.find().toArray(function(err, items) {
             res.send(items);
