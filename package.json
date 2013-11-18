@@ -1,15 +1,13 @@
 {
-  "name": "wine app",
+  "name": "nodejs-express-example-app",
   "version": "0.0.2",
-  "description": "wine app",
+  "description": "a sample node.js app",
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-        "express": "~3.3.4",
-        "mongodb": "1.1.8",
-        "socket.io": "0.9.10"
+    "express": "~3.3.4"
   },
   "engines": {
     "node": "0.10.13",
@@ -17,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ccoenraets/nodecellar"
+    "url": "https://github.com/cloudControl/nodejs-express-example-app"
   },
   "keywords": [
     "node"
