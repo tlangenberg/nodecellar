@@ -1,15 +1,28 @@
 {
-    "name": "wine-cellar",
-    "description": "Wine Cellar Application",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
+  "name": "wine app",
+  "version": "0.0.2",
+  "description": "wine app",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
         "express": "3.x",
         "mongodb": "1.1.8",
         "socket.io": "0.9.10"
-    },
-    "engines": {
-        "node": "0.8.4",
-        "npm": "1.1.49"
-    }
+  },
+  "engines": {
+    "node": "0.10.13",
+    "npm": "1.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccoenraets/nodecellar"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Mark Pundsack",
+  "license": "BSD",
+  "gitHead": "90fd58e343c29e54fc1d4e19036595500b2bdc21"
 }
