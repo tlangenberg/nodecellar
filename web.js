@@ -2,13 +2,12 @@ var express = require('express'),
     wine = require('./routes/wines');
 
 var app = express();
+app.use(express.logger());
 
-app.configure(function () {
-    app.set('port', process.env.PORT || 3000);
-    app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
-    app.use(express.bodyParser()),
-    app.use(express.static(__dirname + '/public'));
-});
+app.use(express.static(__dirname + '/public'));
+
+var port = process.env.PORT || 5000;
+
 
 app.get('/wines', wine.findAll);
 app.get('/wines/:id', wine.findById);
