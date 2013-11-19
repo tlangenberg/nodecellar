@@ -6,14 +6,14 @@ var Server = mongo.Server,
 
 //var server = new Server('localhost', 27017, {auto_reconnect: true});
 console.log("port = "+process.env.PORT);
-var server = new Server('mongodb://dbs001.mongosoup.de/cc_OpLqFhclNYPi', process.env.PORT, {auto_reconnect: true});
+var server = new Server('mongodb://OpLqFhclNYPi:MvqgABFMwMoB@dbs001.mongosoup.de:' + process.env.PORT + '/cc_OpLqFhclNYPi', {auto_reconnect: true});
 db = new Db('winedb', server, {safe: true});
 
 console.log("db connectin established");
 
 db.open(function(err, db) {
     console.log("open db = "+err);
-    client.authenticate('OpLqFhclNYPi', 'MvqgABFMwMoB', function(err, success) {
+    //client.authenticate('OpLqFhclNYPi', 'MvqgABFMwMoB', function(err, success) {
         if(!err) {
             console.log("Connected to 'winedb' database");
             db.collection('wines', {safe:true}, function(err, collection) {
@@ -23,7 +23,7 @@ db.open(function(err, db) {
                 }
             });
         }
-    });
+    //});
 });
 
 exports.findById = function(req, res) {
