@@ -5,7 +5,7 @@ var Server = mongo.Server,
     BSON = mongo.BSONPure;
 
 //var server = new Server('localhost', 27017, {auto_reconnect: true});
-var server = new Server('mongodb://OpLqFhclNYPi:MvqgABFMwMoB@dbs001.mongosoup.de/cc_OpLqFhclNYPi', {auto_reconnect: true});
+var server = new Server('mongodb://OpLqFhclNYPi:MvqgABFMwMoB@dbs001.mongosoup.de/cc_OpLqFhclNYPi', 19176, {auto_reconnect: true});
 db = new Db('winedb', server, {safe: true});
 
 console.log("db connectin established");
